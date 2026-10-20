@@ -1,63 +1,71 @@
-import { FlowerTheme, PhotoPetal, DedicationMessage, FlowerStemConfig } from '../types/flower';
+import {
+  FlowerTheme,
+  PhotoPetal,
+  DedicationMessage,
+  FlowerStemConfig,
+} from '../types/flower';
+
+const imagePath = (filename: string) =>
+  `${import.meta.env.BASE_URL}images/${filename}`;
 
 export const DEFAULT_PHOTO_PETALS: PhotoPetal[] = [
   {
     id: 'photo-1',
-    image: '/images/p1.jpg',
+    image: imagePath('p1.jpg'),
     title: 'Khoảnh Khắc Ngọt Ngào (p1)',
     caption: 'Hoàng hôn rực rỡ ôm trọn cái nắm tay',
     date: '20/06/2025',
     tag: 'Yêu Thương',
-    note: 'Nắm tay nhau đi qua đồng hoa lúc hoàng hôn nhuộm vàng cả chân trời, nguyện bình yên mãi thế này.'
+    note: 'Nắm tay nhau đi qua đồng hoa lúc hoàng hôn nhuộm vàng cả chân trời, nguyện bình yên mãi thế này.',
   },
   {
     id: 'photo-2',
-    image: '/images/p2.jpg',
+    image: imagePath('p2.jpg'),
     title: 'Nụ Cười Thanh Xuân (p2)',
     caption: 'Những ngày nắng ấm đầu mùa xuân nở rộ',
     date: '15/04/2025',
     tag: 'Tuổi Trẻ',
-    note: 'Nụ cười trong veo như nắng sớm mai, lưu giữ trọn vẹn sự ngọt ngào của ngày rực rỡ nhất.'
+    note: 'Nụ cười trong veo như nắng sớm mai, lưu giữ trọn vẹn sự ngọt ngào của ngày rực rỡ nhất.',
   },
   {
     id: 'photo-3',
-    image: '/images/p3.jpg',
+    image: imagePath('p3.jpg'),
     title: 'Bình Yên Bên Em (p3)',
     caption: 'Chú mèo nhỏ say giấc giữa cánh đồng hoa',
     date: '02/05/2025',
     tag: 'Dễ Thương',
-    note: 'Hạnh phúc đôi khi chỉ giản đơn là một buổi sớm bình yên, cuộn tròn nghe tiếng hoa lá rì rào.'
+    note: 'Hạnh phúc đôi khi chỉ giản đơn là một buổi sớm bình yên, cuộn tròn nghe tiếng hoa lá rì rào.',
   },
   {
     id: 'photo-4',
-    image: '/images/p4.jpg',
+    image: imagePath('p4.jpg'),
     title: 'Hội Bạn Thân Dã Ngoại (p4)',
     caption: 'Tiếng cười rộn ràng dưới bóng cây rợp mát',
     date: '18/07/2025',
     tag: 'Tri Kỷ',
-    note: 'Cùng nhau ăn bánh dâu tây, kể những mẩu chuyện không đầu không cuối nhưng rạng rỡ tiếng cười.'
+    note: 'Cùng nhau ăn bánh dâu tây, kể những mẩu chuyện không đầu không cuối nhưng rạng rỡ tiếng cười.',
   },
   {
     id: 'photo-5',
-    image: '/images/p5.jpg',
+    image: imagePath('p5.jpg'),
     title: 'Trang Nhật Ký Buổi Sáng (p5)',
     caption: 'Ly cà phê thơm lừng bên nhành hoa nhỏ',
     date: '10/08/2025',
     tag: 'An Yên',
-    note: 'Từng dòng chữ viết vội lưu lại những ước mơ ngọt ngào, thơm mùi giấy cũ và hoa tươi.'
+    note: 'Từng dòng chữ viết vội lưu lại những ước mơ ngọt ngào, thơm mùi giấy cũ và hoa tươi.',
   },
   {
     id: 'photo-6',
-    image: '/images/p6.jpg',
+    image: imagePath('p6.jpg'),
     title: 'Đóa Hoa Rực Rỡ (p6)',
     caption: 'Nụ cười tươi tắn đón chào ngày 20/10 ngập tràn niềm vui',
     date: '20/10/2026',
     tag: 'Chúc Mừng',
-    note: 'Chúc chị Thảo luôn xinh đẹp rạng ngời như đóa hoa hướng dương đón nắng mai!'
-  }
+    note: 'Chúc chị Thảo luôn xinh đẹp rạng ngời như đóa hoa hướng dương đón nắng mai!',
+  },
 ];
 
-// Configuration of the flower bouquet stems (mimicking the viral TikTok flower cluster)
+// Configuration of the flower bouquet stems
 export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
   {
     id: 'stem-center',
@@ -70,7 +78,7 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 1.15,
     zIndex: 20,
     label: 'Hoa Trung Tâm',
-    flowerType: 'blossom'
+    flowerType: 'blossom',
   },
   {
     id: 'stem-left-main',
@@ -83,7 +91,7 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 0.98,
     zIndex: 18,
     label: 'Hoa Trái Lớn',
-    flowerType: 'rose'
+    flowerType: 'rose',
   },
   {
     id: 'stem-right-main',
@@ -96,7 +104,7 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 1.0,
     zIndex: 19,
     label: 'Hoa Phải Lớn',
-    flowerType: 'lotus'
+    flowerType: 'lotus',
   },
   {
     id: 'stem-left-accent',
@@ -108,7 +116,7 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 0.82,
     zIndex: 12,
     label: 'Hoa Nở Rực Rỡ',
-    flowerType: 'daisy'
+    flowerType: 'daisy',
   },
   {
     id: 'stem-right-accent',
@@ -121,7 +129,7 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 0.86,
     zIndex: 14,
     label: 'Hoa Phải Nhỏ',
-    flowerType: 'blossom'
+    flowerType: 'blossom',
   },
   {
     id: 'stem-center-low',
@@ -133,8 +141,8 @@ export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
     scale: 0.75,
     zIndex: 10,
     label: 'Búp Hoa Dưới',
-    flowerType: 'rose'
-  }
+    flowerType: 'rose',
+  },
 ];
 
 export const FLOWER_THEMES: FlowerTheme[] = [
@@ -157,7 +165,7 @@ export const FLOWER_THEMES: FlowerTheme[] = [
     bgGradient: 'linear-gradient(180deg, #fff0f5 0%, #ffe4e6 50%, #fef3c7 100%)',
     ambientPetalColors: ['#ffb7b2', '#ffdac1', '#e2f0cb', '#ff9aa2', '#ffc6ff'],
     textColor: '#831843',
-    cardBg: 'rgba(255, 255, 255, 0.88)'
+    cardBg: 'rgba(255, 255, 255, 0.88)',
   },
   {
     id: 'fairy_lavender_night',
@@ -178,7 +186,7 @@ export const FLOWER_THEMES: FlowerTheme[] = [
     bgGradient: 'linear-gradient(180deg, #1e1b4b 0%, #2e1065 50%, #0f172a 100%)',
     ambientPetalColors: ['#d8b4fe', '#c084fc', '#f472b6', '#38bdf8', '#fef08a'],
     textColor: '#f3e8ff',
-    cardBg: 'rgba(30, 27, 75, 0.85)'
+    cardBg: 'rgba(30, 27, 75, 0.85)',
   },
   {
     id: 'warm_golden_sunset',
@@ -199,7 +207,7 @@ export const FLOWER_THEMES: FlowerTheme[] = [
     bgGradient: 'linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%)',
     ambientPetalColors: ['#fed7aa', '#fde68a', '#fdba74', '#fecdd3', '#fef08a'],
     textColor: '#7c2d12',
-    cardBg: 'rgba(255, 255, 255, 0.9)'
+    cardBg: 'rgba(255, 255, 255, 0.9)',
   },
   {
     id: 'minty_sky_cyan',
@@ -220,7 +228,7 @@ export const FLOWER_THEMES: FlowerTheme[] = [
     bgGradient: 'linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 50%, #dcfce7 100%)',
     ambientPetalColors: ['#bae6fd', '#7dd3fc', '#a7f3d0', '#e0e7ff', '#c7d2fe'],
     textColor: '#0c4a6e',
-    cardBg: 'rgba(255, 255, 255, 0.9)'
+    cardBg: 'rgba(255, 255, 255, 0.9)',
   },
   {
     id: 'sweet_coral_blush',
@@ -241,13 +249,14 @@ export const FLOWER_THEMES: FlowerTheme[] = [
     bgGradient: 'linear-gradient(180deg, #fff1f2 0%, #ffe4e6 50%, #fed7aa 100%)',
     ambientPetalColors: ['#fecdd3', '#fda4af', '#fca5a5', '#fed7aa', '#fbcfe8'],
     textColor: '#881337',
-    cardBg: 'rgba(255, 255, 255, 0.9)'
-  }
+    cardBg: 'rgba(255, 255, 255, 0.9)',
+  },
 ];
 
 export const DEFAULT_DEDICATION: DedicationMessage = {
   enabled: true,
   to: 'Gửi người thương yêu',
-  message: 'Mỗi đóa hoa nở rộ từ lòng đất là một khoảnh khắc kỷ niệm ấm áp, lưu giữ những ký ức ngọt ngào nhất của chúng ta.',
-  from: 'Từ trái tim dịu dàng'
+  message:
+    'Mỗi đóa hoa nở rộ từ lòng đất là một khoảnh khắc kỷ niệm ấm áp, lưu giữ những ký ức ngọt ngào nhất của chúng ta.',
+  from: 'Từ trái tim dịu dàng',
 };
