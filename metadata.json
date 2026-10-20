@@ -1,0 +1,6 @@
+{
+  "name": "Vườn Hoa Kỷ Niệm - Blooming Photo Petals",
+  "description": "Trang web nghệ thuật tương tác với hoạt ảnh đóa hoa vươn lên từ lòng đất nở rộ, các cánh hoa đan xen cùng hình ảnh kỷ niệm ngọt ngào trong tông màu dễ thương.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

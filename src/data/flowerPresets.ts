@@ -1,0 +1,253 @@
+import { FlowerTheme, PhotoPetal, DedicationMessage, FlowerStemConfig } from '../types/flower';
+
+export const DEFAULT_PHOTO_PETALS: PhotoPetal[] = [
+  {
+    id: 'photo-1',
+    image: '/images/p1.jpg',
+    title: 'Khoảnh Khắc Ngọt Ngào (p1)',
+    caption: 'Hoàng hôn rực rỡ ôm trọn cái nắm tay',
+    date: '20/06/2025',
+    tag: 'Yêu Thương',
+    note: 'Nắm tay nhau đi qua đồng hoa lúc hoàng hôn nhuộm vàng cả chân trời, nguyện bình yên mãi thế này.'
+  },
+  {
+    id: 'photo-2',
+    image: '/images/p2.jpg',
+    title: 'Nụ Cười Thanh Xuân (p2)',
+    caption: 'Những ngày nắng ấm đầu mùa xuân nở rộ',
+    date: '15/04/2025',
+    tag: 'Tuổi Trẻ',
+    note: 'Nụ cười trong veo như nắng sớm mai, lưu giữ trọn vẹn sự ngọt ngào của ngày rực rỡ nhất.'
+  },
+  {
+    id: 'photo-3',
+    image: '/images/p3.jpg',
+    title: 'Bình Yên Bên Em (p3)',
+    caption: 'Chú mèo nhỏ say giấc giữa cánh đồng hoa',
+    date: '02/05/2025',
+    tag: 'Dễ Thương',
+    note: 'Hạnh phúc đôi khi chỉ giản đơn là một buổi sớm bình yên, cuộn tròn nghe tiếng hoa lá rì rào.'
+  },
+  {
+    id: 'photo-4',
+    image: '/images/p4.jpg',
+    title: 'Hội Bạn Thân Dã Ngoại (p4)',
+    caption: 'Tiếng cười rộn ràng dưới bóng cây rợp mát',
+    date: '18/07/2025',
+    tag: 'Tri Kỷ',
+    note: 'Cùng nhau ăn bánh dâu tây, kể những mẩu chuyện không đầu không cuối nhưng rạng rỡ tiếng cười.'
+  },
+  {
+    id: 'photo-5',
+    image: '/images/p5.jpg',
+    title: 'Trang Nhật Ký Buổi Sáng (p5)',
+    caption: 'Ly cà phê thơm lừng bên nhành hoa nhỏ',
+    date: '10/08/2025',
+    tag: 'An Yên',
+    note: 'Từng dòng chữ viết vội lưu lại những ước mơ ngọt ngào, thơm mùi giấy cũ và hoa tươi.'
+  },
+  {
+    id: 'photo-6',
+    image: '/images/p6.jpg',
+    title: 'Đóa Hoa Rực Rỡ (p6)',
+    caption: 'Nụ cười tươi tắn đón chào ngày 20/10 ngập tràn niềm vui',
+    date: '20/10/2026',
+    tag: 'Chúc Mừng',
+    note: 'Chúc chị Thảo luôn xinh đẹp rạng ngời như đóa hoa hướng dương đón nắng mai!'
+  }
+];
+
+// Configuration of the flower bouquet stems (mimicking the viral TikTok flower cluster)
+export const DEFAULT_BOUQUET_STEMS: FlowerStemConfig[] = [
+  {
+    id: 'stem-center',
+    type: 'photo',
+    photoIndex: 0,
+    stemHeight: 460,
+    curveX: 0,
+    leanAngle: 0,
+    swayDelay: 0,
+    scale: 1.15,
+    zIndex: 20,
+    label: 'Hoa Trung Tâm',
+    flowerType: 'blossom'
+  },
+  {
+    id: 'stem-left-main',
+    type: 'photo',
+    photoIndex: 1,
+    stemHeight: 410,
+    curveX: -130,
+    leanAngle: -16,
+    swayDelay: 1.2,
+    scale: 0.98,
+    zIndex: 18,
+    label: 'Hoa Trái Lớn',
+    flowerType: 'rose'
+  },
+  {
+    id: 'stem-right-main',
+    type: 'photo',
+    photoIndex: 2,
+    stemHeight: 420,
+    curveX: 135,
+    leanAngle: 18,
+    swayDelay: 2.1,
+    scale: 1.0,
+    zIndex: 19,
+    label: 'Hoa Phải Lớn',
+    flowerType: 'lotus'
+  },
+  {
+    id: 'stem-left-accent',
+    type: 'floral',
+    stemHeight: 310,
+    curveX: -210,
+    leanAngle: -28,
+    swayDelay: 0.7,
+    scale: 0.82,
+    zIndex: 12,
+    label: 'Hoa Nở Rực Rỡ',
+    flowerType: 'daisy'
+  },
+  {
+    id: 'stem-right-accent',
+    type: 'photo',
+    photoIndex: 3,
+    stemHeight: 330,
+    curveX: 205,
+    leanAngle: 26,
+    swayDelay: 1.8,
+    scale: 0.86,
+    zIndex: 14,
+    label: 'Hoa Phải Nhỏ',
+    flowerType: 'blossom'
+  },
+  {
+    id: 'stem-center-low',
+    type: 'floral',
+    stemHeight: 250,
+    curveX: 45,
+    leanAngle: 8,
+    swayDelay: 2.7,
+    scale: 0.75,
+    zIndex: 10,
+    label: 'Búp Hoa Dưới',
+    flowerType: 'rose'
+  }
+];
+
+export const FLOWER_THEMES: FlowerTheme[] = [
+  {
+    id: 'sweet_pastel_pink',
+    name: 'Hồng Pastel Dễ Thương',
+    description: 'Sắc hồng kẹo ngọt, đào sữa và mơ mộng đáng yêu',
+    emoji: '🌸',
+    petalGradient: ['#ffc2d4', '#ffb3c6', '#ff8fab', '#fb6f92'],
+    petalSecondaryGradient: ['#ffe5ec', '#ffc2d4', '#ffb3c6'],
+    petalBorder: '#f472b6',
+    petalShadow: 'rgba(251, 111, 146, 0.4)',
+    centerColor: '#fde047',
+    centerRingColor: '#f59e0b',
+    pollenColor: '#fbbf24',
+    stemColor: '#4ade80',
+    stemLightColor: '#86efac',
+    leafColor: '#22c55e',
+    groundMoundColor: ['#86efac', '#4ade80', '#16a34a', '#854d0e'],
+    bgGradient: 'linear-gradient(180deg, #fff0f5 0%, #ffe4e6 50%, #fef3c7 100%)',
+    ambientPetalColors: ['#ffb7b2', '#ffdac1', '#e2f0cb', '#ff9aa2', '#ffc6ff'],
+    textColor: '#831843',
+    cardBg: 'rgba(255, 255, 255, 0.88)'
+  },
+  {
+    id: 'fairy_lavender_night',
+    name: 'Đêm Cổ Tích Tím Mơ',
+    description: 'Tông màu kỳ ảo huyền bí với tím oải hương phát sáng',
+    emoji: '💜',
+    petalGradient: ['#e9d5ff', '#d8b4fe', '#c084fc', '#a855f7'],
+    petalSecondaryGradient: ['#f3e8ff', '#e9d5ff', '#d8b4fe'],
+    petalBorder: '#a855f7',
+    petalShadow: 'rgba(192, 132, 252, 0.55)',
+    centerColor: '#fef08a',
+    centerRingColor: '#eab308',
+    pollenColor: '#ffffff',
+    stemColor: '#22c55e',
+    stemLightColor: '#86efac',
+    leafColor: '#16a34a',
+    groundMoundColor: ['#a7f3d0', '#34d399', '#059669', '#3b0764'],
+    bgGradient: 'linear-gradient(180deg, #1e1b4b 0%, #2e1065 50%, #0f172a 100%)',
+    ambientPetalColors: ['#d8b4fe', '#c084fc', '#f472b6', '#38bdf8', '#fef08a'],
+    textColor: '#f3e8ff',
+    cardBg: 'rgba(30, 27, 75, 0.85)'
+  },
+  {
+    id: 'warm_golden_sunset',
+    name: 'Hoàng Hôn Nắng Ấm',
+    description: 'Sắc cam đào, mật ong và ánh nắng chiều dịu dàng',
+    emoji: '🌻',
+    petalGradient: ['#fef08a', '#fde047', '#facc15', '#f97316'],
+    petalSecondaryGradient: ['#ffedd5', '#fed7aa', '#fdba74'],
+    petalBorder: '#ea580c',
+    petalShadow: 'rgba(249, 115, 22, 0.45)',
+    centerColor: '#78350f',
+    centerRingColor: '#b45309',
+    pollenColor: '#fef08a',
+    stemColor: '#84cc16',
+    stemLightColor: '#bef264',
+    leafColor: '#65a30d',
+    groundMoundColor: ['#bef264', '#84cc16', '#4d7c0f', '#713f12'],
+    bgGradient: 'linear-gradient(180deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%)',
+    ambientPetalColors: ['#fed7aa', '#fde68a', '#fdba74', '#fecdd3', '#fef08a'],
+    textColor: '#7c2d12',
+    cardBg: 'rgba(255, 255, 255, 0.9)'
+  },
+  {
+    id: 'minty_sky_cyan',
+    name: 'Băng Lam Sương Mai',
+    description: 'Xanh ngọc bạc hà, bầu trời trong vắt thanh thuần',
+    emoji: '🩵',
+    petalGradient: ['#bae6fd', '#7dd3fc', '#38bdf8', '#0284c7'],
+    petalSecondaryGradient: ['#e0f2fe', '#bae6fd', '#7dd3fc'],
+    petalBorder: '#0284c7',
+    petalShadow: 'rgba(56, 189, 248, 0.45)',
+    centerColor: '#fef08a',
+    centerRingColor: '#eab308',
+    pollenColor: '#ffffff',
+    stemColor: '#34d399',
+    stemLightColor: '#a7f3d0',
+    leafColor: '#10b981',
+    groundMoundColor: ['#a7f3d0', '#34d399', '#047857', '#0f172a'],
+    bgGradient: 'linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 50%, #dcfce7 100%)',
+    ambientPetalColors: ['#bae6fd', '#7dd3fc', '#a7f3d0', '#e0e7ff', '#c7d2fe'],
+    textColor: '#0c4a6e',
+    cardBg: 'rgba(255, 255, 255, 0.9)'
+  },
+  {
+    id: 'sweet_coral_blush',
+    name: 'San Hô Ngọt Ngào',
+    description: 'Tông màu san hô kết hợp hoa trà quyến rũ và thanh lịch',
+    emoji: '🌹',
+    petalGradient: ['#fed7aa', '#fdba74', '#fb923c', '#f43f5e'],
+    petalSecondaryGradient: ['#ffe4e6', '#fecdd3', '#fda4af'],
+    petalBorder: '#e11d48',
+    petalShadow: 'rgba(225, 29, 72, 0.4)',
+    centerColor: '#fde047',
+    centerRingColor: '#d97706',
+    pollenColor: '#fef08a',
+    stemColor: '#4ade80',
+    stemLightColor: '#86efac',
+    leafColor: '#16a34a',
+    groundMoundColor: ['#86efac', '#4ade80', '#15803d', '#7c2d12'],
+    bgGradient: 'linear-gradient(180deg, #fff1f2 0%, #ffe4e6 50%, #fed7aa 100%)',
+    ambientPetalColors: ['#fecdd3', '#fda4af', '#fca5a5', '#fed7aa', '#fbcfe8'],
+    textColor: '#881337',
+    cardBg: 'rgba(255, 255, 255, 0.9)'
+  }
+];
+
+export const DEFAULT_DEDICATION: DedicationMessage = {
+  enabled: true,
+  to: 'Gửi người thương yêu',
+  message: 'Mỗi đóa hoa nở rộ từ lòng đất là một khoảnh khắc kỷ niệm ấm áp, lưu giữ những ký ức ngọt ngào nhất của chúng ta.',
+  from: 'Từ trái tim dịu dàng'
+};
