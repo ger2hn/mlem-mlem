@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { PhotoPetal } from '../types/flower';
 import { ZoomIn, Heart, Sparkles, Beer } from 'lucide-react';
 import { sounds } from '../utils/audio';
-
+const imageAsset = (filename: string) =>
+  `${import.meta.env.BASE_URL}images/${filename}`;
 export interface FloatingItem {
   id: string;
   type: 'photo' | 'beer';
@@ -81,7 +82,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-huda-1',
       type: 'beer',
-      image: '/images/huda.jpg',
+      image: imageAsset('huda.jpg'),      
       name: 'Bia Huda Đậm Tình Miền Trung',
       badge: 'Huda 🍻',
       baseY: 13,
@@ -96,7 +97,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-huda-2',
       type: 'beer',
-      image: '/images/huda.jpg',
+      image: imageAsset('huda.jpg'),
       name: 'Bia Huda Mát Lạnh',
       badge: 'Huda 🍻',
       baseY: 66,
@@ -112,7 +113,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-tiger-1',
       type: 'beer',
-      image: '/images/tiger.jpg',
+      image: imageAsset('tiger.jpg'),
       name: 'Bia Tiger Bản Lĩnh',
       badge: 'Tiger 🐯',
       baseY: 42,
@@ -127,7 +128,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-tiger-2',
       type: 'beer',
-      image: '/images/tiger.jpg',
+      image: imageAsset('tiger.jpg'),
       name: 'Bia Tiger Bạc Sảng Khoái',
       badge: 'Tiger 🐯',
       baseY: 11,
@@ -143,7 +144,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-larue-1',
       type: 'beer',
-      image: '/images/larue.jpg',
+      image: imageAsset('larue.jpg'),
       name: 'Bia Larue Con Cọp Vàng',
       badge: 'Larue 🍺',
       baseY: 56,
@@ -158,7 +159,7 @@ export const FloatingCelebrationItems: React.FC<FloatingCelebrationItemsProps> =
     {
       id: 'beer-larue-2',
       type: 'beer',
-      image: '/images/larue.jpg',
+      image: imageAsset('larue.jpg'),
       name: 'Bia Larue Nhậu Thả Ga',
       badge: 'Larue 🍺',
       baseY: 48,
